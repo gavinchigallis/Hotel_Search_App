@@ -1,0 +1,26 @@
+{
+    "id": 1,
+    "category_id": 1,
+    "sale": 1,
+    "name": "Clinton Villa",
+    "city": "Los Angeles",
+    "distant": 4.4,
+    "cover_image": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Jamaica_Wild_Life/images/covers/yellow_billed_parot.jpg",
+    "images": [
+        {
+            "id": 1,
+            "image": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Jamaica_Wild_Life/images/animals/parrot.png",
+            "file": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Jamaica_Wild_Life/images/animals/parrot.png"
+        },
+        {
+            "id": 2,
+            "image": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Jamaica_Wild_Life/images/animals/parrot.png",
+            "file": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Jamaica_Wild_Life/images/animals/parrot.png"
+        },
+        {
+            "id": 3,
+            "image": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Jamaica_Wild_Life/images/animals/parrot.png",
+            "file": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Jamaica_Wild_Life/images/animals/parrot.png"
+        }
+    ]
+}
