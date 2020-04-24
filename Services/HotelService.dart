@@ -138,15 +138,15 @@ class HotelService{
 
 
     /*
-    * @Description: Get a hotel from our database
+    * @Description: Get a hotel by id from our database
     *
     * @param:
     *
     * @return: JSON
     */
-    Future<dynamic> getHotel(int id) async
+    Future<dynamic> getHotelByID(int id) async
     {
-        this.utility.Custom_Print("START: getHotel");
+        this.utility.Custom_Print("START: getHotelByID");
         //Variables/
         BuildContext context;
         SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -157,19 +157,19 @@ class HotelService{
 
         //Mock API Service
         //Load the JSON file from the "Assets" folder
-        String jsonString = await rootBundle.loadString('lib/Projects/Jamaican_Wild_Life/Assets/API/animal_'+id.toString()+'.json');
+        String jsonString = await rootBundle.loadString('lib/Projects/Hotel_Search_App/Assets/API/hotel_'+id.toString()+'.json');
         Map<String, String> ServerHeaders = new Map();
         ServerHeaders["X-Server"] = "MockDart";
         _server.enqueue(body: jsonString, httpCode: 200, headers: ServerHeaders, delay: new Duration(milliseconds: 2000));
 
-        utility.Custom_Print(utility.App_API_URL + 'animal');
+        utility.Custom_Print(utility.App_API_URL + 'hotel_'+id.toString());
         //utility.Custom_Print('formData: '+formData.toString());
 
 
         HttpClient client = new HttpClient();
         client.badCertificateCallback = ((X509Certificate cert, String host, int port) => true);
 
-        String url = utility.App_API_URL + 'animal';
+        String url = utility.App_API_URL + 'hotel_'+id.toString();
 
         //HttpClientRequest request = await client.getUrl(Uri.parse(url));
         HttpClientRequest request = await client.get(_server.host, _server.port, url);
@@ -245,116 +245,7 @@ class HotelService{
             }
         }
 
-        utility.Custom_Print("STOP: getHotel");
-        return results;
-    }
-
-
-    /*
-    * @Description: Allows a user to like an animal photo
-    *
-    * @param:
-    *
-    * @return: JSON
-    */
-    Future<dynamic> postLikeAnimal(int id) async
-    {
-        this.utility.Custom_Print("START: postLikeAnimal");
-        //Variables/
-        BuildContext context;
-        SharedPreferences prefs = await SharedPreferences.getInstance();
-        dynamic results;
-
-        //Mock API Service
-        //Load the JSON file from the "Assets" folder
-        Map<String, String> ServerHeaders = new Map();
-        ServerHeaders["X-Server"] = "MockDart";
-        _server.enqueue(body: "1", httpCode: 200, headers: ServerHeaders, delay: new Duration(milliseconds: 2000));
-
-        utility.Custom_Print(utility.App_API_URL + 'animal/like/'+id.toString());
-        //utility.Custom_Print('formData: '+formData.toString());
-
-
-        HttpClient client = new HttpClient();
-        client.badCertificateCallback = ((X509Certificate cert, String host, int port) => true);
-
-        String url = utility.App_API_URL + 'animal/like/'+id.toString();
-
-        //HttpClientRequest request = await client.getUrl(Uri.parse(url));
-        HttpClientRequest request = await client.get(_server.host, _server.port, url);
-
-        request.headers.set('content-type', 'application/json');
-
-        //request.add(utf8.encode(json.encode(formData)));
-
-        HttpClientResponse response = await request.close();
-
-        final dynamic responseData = await response.transform(utf8.decoder).join();
-        final dynamic headers = response.headers;
-        
-        switch(response.statusCode) { 
-            case 200: { 
-                dynamic items = responseData;
-                results = items;
-            } 
-            break;
-
-            case 201: {
-                dynamic items = responseData;
-                results = items;
-            } 
-            break;
-
-            case 202: { 
-                dynamic items = json.decode(responseData);
-                results = items;
-            } 
-            break;
-          
-            case 400: {
-                dynamic error = json.decode(responseData);
-            
-                return Future.error(error);
-            }
-
-            case 401: {
-                dynamic error = json.decode(responseData);
-
-                return Future.error(error );
-            }
-
-            case 402: {
-                dynamic error = json.decode(responseData);
-
-                return Future.error(error );
-            }
-
-            case 403: {
-                dynamic error = json.decode(responseData);
-
-                return Future.error(error );
-            }
-
-            case 404: {
-                dynamic error = json.decode(responseData);
-
-                return Future.error(error);
-            }
-
-            case 419: {
-                dynamic error = json.decode(responseData);
-
-                return Future.error(error);
-            }
-                
-            default: { 
-                dynamic error = json.decode(responseData);
-
-                return Future.error(error);
-            }
-        }
-
-        utility.Custom_Print("STOP: postLikeAnimal");
+        utility.Custom_Print("STOP: getHotelByID");
         return results;
     }
 

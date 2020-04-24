@@ -12,6 +12,7 @@ class Hotel
     int space = 0;
     double review = 0;
     String image = "";
+    dynamic user;
     List<dynamic> images = [];
 
     /*[Constructors]*/
@@ -27,6 +28,7 @@ class Hotel
         space = json['space'],
         review = json['review'],
         image = json['image'],
+        user = json['user'],
         images = json['images'];
 
     Map<String, dynamic> toJson() =>
@@ -39,6 +41,7 @@ class Hotel
         'space': space,
         'review': review,
         'image': image,
+        'user': user,
         'images': images
     };
 

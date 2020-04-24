@@ -1,20 +1,20 @@
 {
-    "id": 1,
+    "id": 2,
     "category_id": 2,
-    "name": "Clindon Villa",
-    "price": 199.00,
+    "name": "Blue jungle Villa",
+    "price": 250.00,
     "location": {
-        "city": "kingston",
-        "country": "Jamaica"
+        "city": "Panama city",
+        "country": "Panama"
     },
-    "space": 2486,
-    "review": 4.4,
-    "image": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Hotel_Search_App/images/Photo.png",
+    "space": 2476,
+    "review": 3.1,
+    "image": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Hotel_Search_App/images/Photo_1.png",
     "user": {
-        "id": 1,
-        "first_name": "Orlando",
-        "last_name": "Palmer",
-        "image": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Hotel_Search_App/images/profile_1.jpeg"
+        "id": 2,
+        "first_name": "Jesica",
+        "last_name": "Jones",
+        "image": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Hotel_Search_App/images/profile_2.jpeg"
     },
     "images": [
         {

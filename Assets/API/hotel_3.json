@@ -1,20 +1,20 @@
 {
-    "id": 1,
+    "id": 3,
     "category_id": 2,
-    "name": "Clindon Villa",
-    "price": 199.00,
+    "name": "Moon Palace Hotel",
+    "price": 132.00,
     "location": {
-        "city": "kingston",
-        "country": "Jamaica"
+        "city": "New York",
+        "country": "USA"
     },
-    "space": 2486,
-    "review": 4.4,
-    "image": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Hotel_Search_App/images/Photo.png",
+    "space": 1568,
+    "review": 4.8,
+    "image": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Hotel_Search_App/images/Photo_2.png",
     "user": {
-        "id": 1,
-        "first_name": "Orlando",
-        "last_name": "Palmer",
-        "image": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Hotel_Search_App/images/profile_1.jpeg"
+        "id": 3,
+        "first_name": "Tim",
+        "last_name": "Cooks",
+        "image": "http://dynamicevolution.technology/Apps/flutter_widgets/storage/app/public/app_assets/Hotel_Search_App/images/profile_3.jpeg"
     },
     "images": [
         {

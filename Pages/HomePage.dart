@@ -12,7 +12,7 @@ import 'dart:math';
 import '../Models/ThemeAttribute.dart';
 import '../Models/Utility.dart';
 import '../Models/Hotel.dart';
-//import '../Pages/PhotoPage.dart';
+import '../Pages/HotelPage.dart';
 import '../Widgets/HotelCardWidget.dart';
 import '../Services/HotelService.dart';
 
@@ -453,18 +453,21 @@ class _HomePage extends State<HomePage> with WidgetsBindingObserver{
                                                             Hotel hotel = new Hotel.fromJson(item);
                                                             
                                                             return GestureDetector(
-                                                                child: Container(
-                                                                    //color: Colors.green,
-                                                                    margin: EdgeInsets.only(left: 10, top: 5, right: 10, bottom: 5),
-                                                                    child: new HotelCardWidget.withData(hotel),
+                                                                child: Hero(
+                                                                    tag: "hotel_"+hotel.id.toString(),
+                                                                    child: Container(
+                                                                        //color: Colors.green,
+                                                                        margin: EdgeInsets.only(left: 10, top: 5, right: 10, bottom: 5),
+                                                                        child: new HotelCardWidget.withData(hotel),
+                                                                    )
                                                                 ),
                                                                 onTap: (){
-                                                                    /*Navigator.push(
+                                                                    Navigator.push(
                                                                         context,
                                                                         MaterialPageRoute<bool>(
-                                                                            builder: (BuildContext context) => new PhotoPage(animal.id)
+                                                                            builder: (BuildContext context) => new HotelPage(hotel.id)
                                                                         )
-                                                                    );*/
+                                                                    );
                                                                 }
                                                             );
                                                         },
